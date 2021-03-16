@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Challenge Problems for Form</title>
+</head>
+<body>
+    <script lang="javascript">
+        function move(){
+            if(document.getElementById("l1").value != ""){
+
+                document.getElementById("l2").value = document.getElementById("l1").value;
+                document.getElementById("l1").value = "";
+                document.getElementById("button").value = "JUMP <"
+            }else{
+                
+                document.getElementById("l1").value = document.getElementById("l2").value;
+                document.getElementById("l2").value = "";
+                document.getElementById("button").value = "JUMP >"
+            }
+        }
+    </script>
+    <form>
+        <input type="letters" id="l1" name="l1" value="">
+        <input type="button" id = 'button' value="JUMP >" onclick="move()">
+        <input type="letters" id="l2" name="l2" value="">
+    </form> 
+    
+</body>
+</html>
